@@ -1,6 +1,6 @@
 app-id: org.gnome.atomix
 runtime: org.gnome.Platform
-runtime-version: '42'
+runtime-version: '46'
 sdk: org.gnome.Sdk
 command: atomix
 rename-icon: atomix
@@ -11,6 +11,13 @@ finish-args:
   - --socket=pulseaudio
   - --socket=fallback-x11
   - --share=ipc
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/pkgconfig
+  - /share/vala
+  - '*.la'
+  - '*.a'
 
 modules:
   - name: libgnome-games-support
@@ -26,7 +33,7 @@ modules:
       cflags: -fcommon
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/atomix/3.34/atomix-3.34.0.tar.xz
-        sha256: 0054c3b3830f1fe4383e17d716e6034b608859f4352a102130c13156894a2041
+        url: https://download.gnome.org/sources/atomix/44/atomix-44.0.tar.xz
+        sha256: c8849317688d87da734c9063035631052007f2a8799b6c6cc915265880b55fb4
       - type: patch
-        path: appdata.patch
+        path: fix_appdata.patch
