@@ -37,3 +37,5 @@ modules:
         sha256: c8849317688d87da734c9063035631052007f2a8799b6c6cc915265880b55fb4
       - type: patch
         path: fix_appdata.patch
+      - type: patch
+        path: fix_icon.patch

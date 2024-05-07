@@ -1,0 +1,13 @@
+diff --git a/src/main.c b/src/main.c
+index 6866144..6954c5f 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -117,7 +117,7 @@ static void verb_HelpAbout_cb (GSimpleAction *action, GVariant *variant, gpointe
+ 
+   gtk_show_about_dialog(GTK_WINDOW(app->mainwin),
+                         "program-name", _("Atomix"),
+-                        "logo-icon-name", "atomix",
++                        "logo-icon-name", "org.gnome.atomix",
+                         "version", VERSION,
+                         "comments", _("A puzzle game about atoms and molecules"),
+                         "website", "https://wiki.gnome.org/Apps/Atomix",
